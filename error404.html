@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html class="font-nunito scroll-smooth focus:scroll-auto w-full h-full" lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BurgerHub</title>
+    <!-- подключение шрифта Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="./style/main.css">
+    <!-- подключение шрифта Nunito -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+</head>
+<body class="container mx-auto bg-[url('./style/img/bg.svg')] bg-no-repeat bg-slate-100 flex flex-col gap-12 w-full h-full">
+    <header class="flex flex-col items-center gap-6 py-5"> <!-- шапка -->
+        <a href="#"><img src="./style/img/logo-head.png" width="153" alt="логотип"></a>
+        <div class="flex items-center gap-5">
+            <img src="./style/img/logo-new.png" width="326" height="326" class="animate-bounce" alt="бургер">
+            <div class="flex flex-col gap-12 text-orange-50">
+                <h1 class="flex flex-col text-5xl font-extrabold">Только самые <span class="text-orange-500">сочные бургеры!</span></h1>
+                <p>Бесплатная доставка от 599₽</p>
+            </div>
+        </div>
+    </header>
+    <nav class="pt-28"> <!-- навигация меню -->
+        <ul class="flex justify-between *:border *:border-slate-100 *:rounded-full *:cursor-pointer *:py-2 *:px-4 *:text-nowrap *:transition hover:*:border-orange-600 active:*:text-orange-50 active:*:bg-orange-600">
+            <li class="bg-yellow-500"><button class="flex gap-2"><img src="./style/img/nav/burger.svg" alt="бургер">Бургеры</button></li>
+            <li><button class="flex gap-2"><img src="./style/img/nav/onion.svg" alt="кренделек">Закуски</button></li>
+            <li><button class="flex gap-2"><img src="./style/img/nav/hotdog.svg" alt="хот-дог">Хот-доги</button></li>
+            <li><button class="flex gap-2"><img src="./style/img/nav/fast-food.svg" alt="">Комбо</button></li>
+            <li><button class="flex gap-2"><img src="./style/img/nav/burrito.svg" alt="">Шаурма</button></li>
+            <li><button class="flex gap-2"><img src="./style/img/nav/pizza.svg" alt="">Пицца</button></li>
+            <li><button class="flex gap-2"><img src="./style/img/nav/noodles.svg" alt="">Вок</button></li>
+            <li><button class="flex gap-2"><img src="./style/img/nav/doughnut.svg" alt="">Дессерты</button></li>
+            <li><button class="flex gap-2"><img src="./style/img/nav/ketchup.svg" alt="">Соусы</button></li>
+        </ul>
+    </nav>
+    <main class="grid min-h-full place-items-center px-6 py-24 sm:py-32 lg:px-8">
+        <div class="text-center">
+          <p class="text-base font-semibold text-indigo-600">404</p>
+          <h1 class="mt-4 text-3xl font-bold tracking-tight text-gray-900 sm:text-5xl">Page not found</h1>
+          <p class="mt-6 text-base leading-7 text-gray-600">Sorry, we couldn’t find the page you’re looking for.</p>
+          <div class="mt-10 flex items-center justify-center gap-x-6">
+            <a href="#" class="rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Go back home</a>
+            <a href="#" class="text-sm font-semibold text-gray-900">Contact support <span aria-hidden="true">&rarr;</span></a>
+          </div>
+        </div>
+      </main>
+    <footer class="border-t py-10">
+        <div class="flex justify-around">
+            <div class="flex flex-col gap-16">
+                <a href="#"><img src="./style/img/logo-head.png" width="300" alt="логотип"></a>
+                <p>© BurgerHub, 2024</p>
+            </div>
+            <div class="flex gap-32">
+                <div class="flex flex-col gap-6">
+                    <h3 class="text-2xl">Номер для заказа</h3>
+                    <a class="flex gap-1 hover:underline" href="tel:+79308333811"><img src="./style/img/tel.svg" alt="телефон">+7 (930) 833-38-11</a>
+                </div>
+                <div class="flex flex-col gap-6">
+                    <h3 class="text-2xl	">Мы в соцсетях</h3>
+                    <div class="flex gap-2">
+                        <a href="#" class="p-2 bg-yellow-500 rounded-full transition transition hover:bg-orange-600"><img src="./style/img/social/vk.svg" alt="ВКонтакте" width="10"></a>
+                        <a href="#" class="p-2 bg-yellow-500 rounded-full transition hover:bg-orange-600"><img src="./style/img/social/telegram.svg" alt="Телеграм" width="10"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
