@@ -7,23 +7,37 @@
     <!-- подключение шрифта Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="./style/main.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                screens: {
+                    'sm': '320px',
+                    'md': '768px',
+                    'lg': '1024px',
+                    'xl': '1280px',
+                    '2xl': '1536px',
+                    '3xl': '1600px',
+                    },
+                }
+            }
+      </script>
     <!-- подключение шрифта Nunito -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
 </head>
-<body class="container mx-auto sm:pl-16 lg:pl-8 xl:pl-4 bg-[url('./style/img/bg.svg')] bg-no-repeat bg-slate-100 flex flex-col gap-12 w-full h-full">
+<body class="container mx-auto sm:pl-6 lg:pl-8 xl:pl-4 bg-[url('./style/img/bg.svg')] bg-no-repeat bg-slate-100 flex flex-col md:gap-12 sm:gap-4 w-full h-full">
     <header class="flex flex-col items-center gap-6 py-5"> <!-- шапка -->
         <a href="#"><img src="./style/img/logo-head.png" width="153" alt="логотип"></a>
-        <div class="flex items-center gap-5">
-            <img src="./style/img/logo-new.png" width="326" height="326" class="animate-bounce" alt="бургер">
-            <div class="flex flex-col gap-12 text-orange-50">
-                <h1 class="flex flex-col text-5xl font-extrabold">Только самые <span class="text-orange-500">сочные бургеры!</span></h1>
+        <div class="flex md:items-center md:flex-row gap-5 sm:flex-col-reverse">
+            <img src="./style/img/logo-new.png" class="sm:w-56 md:w-80 md:h-80 animate-bounce" alt="бургер">
+            <div class="flex flex-col md:items-start sm:items-center md:gap-12 sm:gap-4 text-orange-50">
+                <h1 class="flex flex-col md:text-5xl md:items-start font-extrabold sm:items-center sm:text-3xl">Только самые <span class="text-orange-500">сочные бургеры!</span></h1>
                 <p>Бесплатная доставка от 599₽</p>
             </div>
         </div>
     </header>
-    <nav class="pt-28"> <!-- навигация меню -->
+    <nav class="md:pt-28 sm:pt-0"> <!-- навигация меню -->
         <ul class="flex gap-1 sm:gap-6 sm:overflow-x-auto ">
             <li class=""><button class="bg-yellow-500 flex justify-center items-center gap-2 border border-slate-100 rounded-full cursor-pointer text-nowrap transition hover:border-orange-600 active:text-orange-50 active:bg-orange-600 sm:py-0.5 sm:px-4 sm:text-xs lg:py-1 lg:px-2 lg:text-base xl:py-2 xl:px-4"><img src="./style/img/nav/burger.svg" alt="бургер">Бургеры</button></li>
             <li><button class="flex justify-center items-center gap-2 border border-slate-100 rounded-full cursor-pointer text-nowrap transition hover:border-orange-600 active:text-orange-50 active:bg-orange-600 sm:py-0.5 sm:px-4 sm:text-xs lg:py-1 lg:px-2 lg:text-base xl:py-2 xl:px-4"><img src="./style/img/nav/onion.svg" alt="кренделек">Закуски</button></li>
@@ -36,7 +50,7 @@
             <li><button class="flex justify-center items-center gap-2 border border-slate-100 rounded-full cursor-pointer text-nowrap transition hover:border-orange-600 active:text-orange-50 active:bg-orange-600 sm:py-0.5 sm:px-4 sm:text-xs lg:py-1 lg:px-2 lg:text-base xl:py-2 xl:px-4"><img src="./style/img/nav/ketchup.svg" alt="">Соусы</button></li>
         </ul>
     </nav>
-    <main class="flex lg:flex-row md:flex-col gap-7 flex-auto"> <!-- тело сайта -->
+    <main class="flex lg:flex-row sm:flex-col gap-7 flex-auto"> <!-- тело сайта -->
 
         <div class="flex flex-col gap-3 lg:w-1/4 sm:w-full mt-20 h-max py-6 px-4 bg-slate-50 rounded-2xl hover:shadow-md"> <!-- корзина -->
             <div class="flex justify-between">
@@ -147,12 +161,12 @@
         </div>
     </main>
     <footer class="border-t py-10">
-        <div class="flex xl:flex-row xl:justify-between lg:flex-col lg:flex-col lg:content-around">
+        <div class="flex xl:flex-row xl:justify-between lg:content-around sm:flex-col-reverse sm:gap-8">
             <div class="flex flex-col gap-16">
                 <a href="#"><img src="./style/img/logo-head.png" width="300" alt="логотип"></a>
                 <p>© BurgerHub, 2024</p>
             </div>
-            <div class="flex gap-32">
+            <div class="flex lg:gap-32 lg:flex-row sm:flex-col sm:gap-8">
                 <div class="flex flex-col gap-6">
                     <h3 class="text-2xl">Номер для заказа</h3>
                     <a class="flex gap-1 hover:underline" href="tel:+79308333811"><img src="./style/img/tel.svg" alt="телефон">+7 (930) 833-38-11</a>
